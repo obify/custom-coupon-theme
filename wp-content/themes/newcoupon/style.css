@@ -1,0 +1,60 @@
+/*
+Theme Name: MyTheme
+Theme URI: https://wordpress.org/themes/MyTheme/
+Author: MyTheme Author
+Author URI: https://wordpress.org/
+Description: Custom wordpress theme created from Html template
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: mytheme
+*/
+
+@import url("assets/css/fontawesome-all.min.css");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,300italic");
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300&family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+
+* {
+	font-family: 'Raleway', sans-serif;
+}
+
+.section-title,
+.searchform-section {
+	width: 50vw;
+}
+
+.blink_me {
+	animation: blinker 2s linear infinite;
+}
+
+.top-banner {
+	margin-bottom: -8px;
+	position: sticky;
+	top: 0;
+}
+
+@keyframes blinker {
+	50% {
+		opacity: 0.3;
+	}
+}
+
+#wpforms-submit-59 {
+	background-color: black;
+	border-color: black;
+	width: 200px;
+	font-weight: bold;
+	color: white;
+}
+
+#page-wrapper {}
+
+@media(max-width: 768px) {
+	.searchform-section {
+		width: 98vw;
+	}
+
+	.section-title {
+		width: 98vw;
+	}
+}
