@@ -16,6 +16,8 @@ https://developer.wordpress.org/reference/classes/wp_query/
 https://www.wp-hasty.com/tools/wordpress-custom-post-type-generator/
 
 https://developer.wordpress.org/themes/template-files-section/custom-post-type-template-files/
+Archive page for custom post type
+https://wordpress.stackexchange.com/questions/217638/archive-post-type-php-not-loading-instead-the-default-archive-php-loads
 archive.php - loads all posts under 1 category
 front-page.php - loads the home page
 page.php - shows any page data
@@ -49,3 +51,8 @@ https://www.wpbeginner.com/beginners-guide/how-to-create-a-contact-form-in-wordp
 https://weichie.com/blog/wordpress-filter-posts-with-ajax/
 https://www.youtube.com/playlist?list=PL-QmEaHDstSYoUBQrdoDbV5zxXNSPS03J
 https://www.youtube.com/watch?v=qceUVTwabXk
+
+https://www.advancedcustomfields.com/resources/image/
+
+Loading post for custom post type for selected term
+https://stackoverflow.com/questions/9322090/wordpress-getting-posts-in-a-custom-taxonomy
