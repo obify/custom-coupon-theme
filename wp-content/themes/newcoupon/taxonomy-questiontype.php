@@ -5,7 +5,7 @@
     <div class="section-title mx-auto my-4 text-center text-uppercase">
         <h4 class="fw-bold">Interview Questions & Answers</h4>
         <h5>
-            <span class="badge rounded-pill bg-warning">
+            <span style="font-size: 16px;" class="px-2 m-1 badge rounded-pill bg-warning">
                 <?php echo $term ?></span> 
         </h5>
     </div>
@@ -14,14 +14,14 @@
             <div class="col-md-9 col-lg-9 col-sm-12 mb-2">
         <?php 
                 // set the "paged" parameter (use 'page' if the query is on a static front page)
-                $paged = ( get_query_var( 'page' ) ) ? get_query_var( 'page' ) : '1';
+                $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : '1';
                //Gives current selected taxonomy
                 $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );;
                 $coupon_arguments = array(
                     'nopaging'               => false,
                     'paged'                  => $paged,
                     'post_type' => 'question',
-                    'posts_per_page' => 16,
+                    'posts_per_page' => 8,
                     'tax_query' => array(
                         array(
                          'taxonomy' => 'questiontype',
@@ -49,7 +49,7 @@
                         </h2>
                         </div>
 
-                        <div id="collapse<?php echo the_ID(); ?>" class="collapse show" aria-labelledby="heading<?php echo the_ID(); ?>" data-parent="#accordionExample">
+                        <div id="collapse<?php echo the_ID(); ?>" class="collapse show" aria-labelledby="heading<?php echo the_ID(); ?>" data-parent="#accordionQnA">
                         <div class="card-body">
                             <?php echo the_field("answer"); ?>
                         </div>
@@ -60,8 +60,8 @@
             <?php } ?>
             
             <div class="d-flex justify-content-between">
-                <div class="fs-3"><?php previous_posts_link( '« Previous' ); ?></div>
-                <div class="fs-3"><?php next_posts_link( 'Next »', $coupons->max_num_pages );?></div>
+                <div class="fs-3"  style="font-size: 20px;"><?php previous_posts_link( '« Previous' ); ?></div>
+                <div class="fs-3"  style="font-size: 20px;"><?php next_posts_link( 'Next »', $coupons->max_num_pages );?></div>
             </div>
             <?php } else {
                 // no posts found
@@ -84,7 +84,7 @@
             if ( ! empty( $terms ) && is_array( $terms ) ) {
                 // Run a loop and print them all
                 foreach ( $terms as $term ) { ?>
-                    <span class="fs-6 m-1 text-white badge rounded-pill bg-warning">
+                   <span style="font-size: 16px;" class="px-2 m-1 text-white badge rounded-pill bg-warning">
                         <a class="text-dark text-decoration-none"
                         href="<?php echo esc_url( get_term_link( $term ) ) ?>">
                         <?php echo $term->name; ?>
